@@ -52,6 +52,7 @@ updateLog=更新日志
 ```
 
 - 上传到服务器（目前以上传到fir为例，具体请参考[fir上传接口](https://fir.im/docs/publish)）
+
  a.获取apk上传信息->b.上传icon->c.上传apk
 
 #流程
