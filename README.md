@@ -5,7 +5,7 @@ apk自动打包上传困扰了我很久，很想有一个脚本或程序能够�
 #思路
 以下为上传到fir服务器为例：
 
-1. 配置gradle的apk输出路径
+- 配置gradle的apk输出路径
 ```
     buildTypes {
         release {
@@ -21,7 +21,8 @@ apk自动打包上传困扰了我很久，很想有一个脚本或程序能够�
         }
     }
 ```
-2. 通过Java运行cmd命令到项目目录，运行grald命令,gradlew assembleRelease命令为正式环境打包，你可以手动配置打包环境命令
+
+- 通过Java运行cmd命令到项目目录，运行grald命令,gradlew assembleRelease命令为正式环境打包，你可以手动配置打包环境命令
 ```
   public static  String  genAPK(String projectPath) throws IOException {
         String params1=projectPath.substring(0,1);
@@ -31,14 +32,16 @@ apk自动打包上传困扰了我很久，很想有一个脚本或程序能够�
          return   Cmd.exec(cmd);
     }
 ```
-3. 通过 aapt解析apk的信息，解析命令为<code>aapt dump badging apk路径</code>
+
+- 通过 aapt解析apk的信息，解析命令为<code>aapt dump badging apk路径</code>
 ```
  public static APPInfo parasAPk(String apkPath) throws IOException {
          String reulst=Cmd.exec(PARASE_APK+apkPath);
          return APPInfo.getAPPInfo(reulst);
     }
 ```
-4. 配置上传文件信息
+
+- 配置上传文件信息
 ```
 #apk生成后绝对地址，这个路径需要在gralde里面设置
 apkPath=f:/app/apkauto.apk
@@ -47,7 +50,8 @@ appProjectPath=E:/work/APkAuto/
 #更新日志
 updateLog=更新日志
 ```
-5. 上传到服务器（目前以上传到fir为例，具体请参考[fir上传接口](https://fir.im/docs/publish)）
+
+- 上传到服务器（目前以上传到fir为例，具体请参考[fir上传接口](https://fir.im/docs/publish)）
  a.获取apk上传信息->b.上传icon->c.上传apk
 
 #流程
