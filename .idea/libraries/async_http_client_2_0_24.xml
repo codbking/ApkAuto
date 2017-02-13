@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="async-http-client-2.0.24">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/async-http-client-2.0.24.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/fastjson-1.2.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/okhttp-3.6.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/okio-1.11.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
